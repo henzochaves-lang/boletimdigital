@@ -1,0 +1,232 @@
+/* Configurações gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef7ff;
+    color: #1f2937;
+    line-height: 1.5;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background: linear-gradient(135deg, #1976d2, #2196f3);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.cabecalho h1 {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+.cabecalho p {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Conteúdo principal */
+.container {
+    width: min(1200px, 92%);
+    margin: 30px auto;
+}
+
+/* Introdução */
+.introducao {
+    background-color: white;
+    border-left: 6px solid #43a047;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.introducao h2 {
+    color: #1565c0;
+    margin-bottom: 5px;
+}
+
+/* Área dos cards */
+.resumo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    margin-bottom: 35px;
+}
+
+/* Card */
+.card {
+    background-color: white;
+    border-radius: 18px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-top: 5px solid #1976d2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card:nth-child(even) {
+    border-top-color: #43a047;
+}
+
+/* Ícones dos cards */
+.icone {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: #e3f2fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.card:nth-child(even) .icone {
+    background-color: #e8f5e9;
+}
+
+.card h3 {
+    color: #374151;
+    font-size: 0.95rem;
+    margin-bottom: 3px;
+}
+
+.card p {
+    color: #1565c0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card:nth-child(even) p {
+    color: #2e7d32;
+}
+
+#frequencia-texto {
+    display: block;
+    color: #2e7d32;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Seção da tabela */
+.tabela-section {
+    background-color: white;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.titulo-tabela {
+    margin-bottom: 20px;
+}
+
+.titulo-tabela h2 {
+    color: #1565c0;
+    margin-bottom: 4px;
+}
+
+.titulo-tabela p {
+    color: #6b7280;
+}
+
+/* Permite rolagem horizontal no celular */
+.tabela-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #1976d2;
+    color: white;
+    padding: 13px 10px;
+    text-align: left;
+}
+
+td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #dbeafe;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fbff;
+}
+
+tbody tr:hover {
+    background-color: #e8f5e9;
+}
+
+/* Situações */
+.situacao {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: bold;
+}
+
+.bom {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.atencao {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.indisponivel {
+    background-color: #e5e7eb;
+    color: #4b5563;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    color: #6b7280;
+    padding: 25px 15px;
+    font-size: 0.9rem;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 600px) {
+    .cabecalho h1 {
+        font-size: 1.8rem;
+    }
+
+    .container {
+        width: 94%;
+        margin-top: 20px;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .tabela-section {
+        padding: 18px;
+    }
+
+    .introducao {
+        padding: 17px;
+    }
+}
