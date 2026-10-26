@@ -1,109 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Boletim Digital - 8º Ano</title>
-
-    <!-- Arquivo de estilos -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boletim Digital</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header class="cabecalho">
-        <div>
-            <h1>📚 Boletim Digital</h1>
-            <p>8º Ano</p>
-        </div>
-    </header>
 
-    <main class="container">
-        <!-- Identificação fictícia -->
-        <section class="introducao">
-            <h2>Olá, Estudante Exemplo! 👋</h2>
-            <p>Acompanhe suas notas, faltas e desempenho.</p>
-        </section>
+  <!-- Cabeçalho principal da página -->
+  <header>
+    <h1>Boletim Digital</h1>
+    <p class="subtitulo">Estudante: Estudante Exemplo | Série: 8º Ano</p>
+  </header>
 
-        <!-- Cards de resumo -->
-        <section class="resumo" aria-label="Resumo do boletim">
+  <main class="container">
+    <!-- Área de cards de resumo -->
+    <section class="cards-grid">
+      <div class="card">
+        <h3>Média Geral</h3>
+        <p id="media-geral" class="valor-card">—</p>
+      </div>
 
-            <article class="card">
-                <div class="icone">📊</div>
-                <div>
-                    <h3>Média geral</h3>
-                    <p id="media-geral">—</p>
-                </div>
-            </article>
+      <div class="card">
+        <h3>Total de Faltas</h3>
+        <p id="total-faltas" class="valor-card">—</p>
+      </div>
 
-            <article class="card">
-                <div class="icone">📝</div>
-                <div>
-                    <h3>Total de faltas</h3>
-                    <p id="total-faltas">—</p>
-                </div>
-            </article>
+      <div class="card">
+        <h3>Bom Desempenho</h3>
+        <p id="qtd-bom-desempenho" class="valor-card">—</p>
+      </div>
 
-            <article class="card">
-                <div class="icone">⭐</div>
-                <div>
-                    <h3>Bom desempenho</h3>
-                    <p id="bom-desempenho">—</p>
-                </div>
-            </article>
+      <div class="card">
+        <h3>Precisa de Atenção</h3>
+        <p id="qtd-atencao" class="valor-card">—</p>
+      </div>
 
-            <article class="card">
-                <div class="icone">🔎</div>
-                <div>
-                    <h3>Precisam de atenção</h3>
-                    <p id="precisam-atencao">—</p>
-                </div>
-            </article>
+      <div class="card">
+        <h3>Frequência Geral</h3>
+        <p id="frequencia-geral" class="valor-card">92%</p>
+        <span class="subtexto-card">Frequência adequada</span>
+      </div>
+    </section>
 
-            <article class="card">
-                <div class="icone">💚</div>
-                <div>
-                    <h3>Frequência</h3>
-                    <p id="frequencia">—</p>
-                    <span id="frequencia-texto"></span>
-                </div>
-            </article>
+    <!-- Tabela responsiva de disciplinas -->
+    <section class="tabela-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Disciplina</th>
+            <th>1º Tri</th>
+            <th>2º Tri</th>
+            <th>3º Tri</th>
+            <th>Média</th>
+            <th>Faltas</th>
+            <th>Situação</th>
+          </tr>
+        </thead>
+        <tbody id="corpo-tabela">
+          <!-- O JavaScript vai preencher as linhas aqui automaticamente -->
+        </tbody>
+      </table>
+    </section>
+  </main>
 
-        </section>
-
-        <!-- Tabela de notas -->
-        <section class="tabela-section">
-            <div class="titulo-tabela">
-                <h2>Notas por disciplina</h2>
-                <p>Notas na escala de 0 a 10</p>
-            </div>
-
-            <div class="tabela-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Disciplina</th>
-                            <th>1º Tri</th>
-                            <th>2º Tri</th>
-                            <th>3º Tri</th>
-                            <th>Média</th>
-                            <th>Faltas</th>
-                            <th>Situação</th>
-                        </tr>
-                    </thead>
-
-                    <!-- O JavaScript preencherá as 15 disciplinas aqui -->
-                    <tbody id="tabela-notas"></tbody>
-                </table>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>Boletim Digital • Dados fictícios para demonstração</p>
-    </footer>
-
-    <!-- Arquivo JavaScript -->
-    <script src="script.js"></script>
+  <!-- Vinculação do arquivo de código JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
