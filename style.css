@@ -137,3 +137,12 @@ tr:hover {
 .status-indisponivel {
   color: var(--cor-texto-mutado);
 }
+
+/* Estilos adicionais para a nova funcionalidade */
+.card-login {
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-secundaria);
+  border-top: 4px solid var(--cor-destaque);
+  border-radius: var(--borda-raio);
+  padding: 2
+}
